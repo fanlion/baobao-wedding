@@ -2,7 +2,7 @@
  * @Author: fan.li
  * @Date: 2020-12-06 15:17:45
  * @Last Modified by: fan.li
- * @Last Modified time: 2020-12-06 18:47:58
+ * @Last Modified time: 2020-12-06 23:23:18
  *
  * Banner组件
  */
@@ -38,7 +38,7 @@ export default function Banner(props: Props) {
       >
         {list.map((item: Item) => (
           <SwiperItem key={item.id} className={`${prefix}__swiper-item`}>
-            <Image src={item.src} className={`${prefix}__swiper-item-img`} />
+            <Image src={item.src} className={`${prefix}__swiper-item-img`} mode='aspectFill' />
           </SwiperItem>
         ))}
       </Swiper>

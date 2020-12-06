@@ -2,7 +2,7 @@
  * @Author: fan.li
  * @Date: 2020-12-06 17:46:02
  * @Last Modified by: fan.li
- * @Last Modified time: 2020-12-06 20:32:27
+ * @Last Modified time: 2020-12-06 23:22:41
  *
  * 首页的照片卡片
  */
@@ -28,7 +28,7 @@ export default function PhotoCard(props: Props) {
   return (
     <View className={cls(`${prefix}`, className)}>
       <View className={`${prefix}_header`}>{title}</View>
-      <Image src={src} className={`${prefix}_img`} lazyLoad />
+      <Image src={src} className={`${prefix}_img`} lazyLoad mode='aspectFill' />
       <View className={`${prefix}_detail`} onClick={onClick}>
         查看详情
       </View>
