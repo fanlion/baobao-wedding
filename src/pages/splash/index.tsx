@@ -1,8 +1,15 @@
 import React from 'react'
-import { View } from '@tarojs/components'
+import { View, Button } from '@tarojs/components'
+import Taro from '@tarojs/taro';
+import styles from './index.module.scss';
 
-import './index.scss'
 
 export default function Splash() {
-  return <View>Splash</View>
+  const handleAccept = () => {
+    Taro.switchTab({ url: '/pages/home/index'})
+  };
+
+  return <View className={styles.container}>
+    <Button onClick={handleAccept}>接受</Button>
+  </View>
 }

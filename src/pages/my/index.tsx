@@ -3,6 +3,7 @@ import { View } from '@tarojs/components'
 
 import './index.scss'
 
-export default function Map() {
-  return <View>地图</View>
+export default function Bless() {
+  return <View>My</View>
 }
+
