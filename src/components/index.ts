@@ -1,4 +1,5 @@
-import BaBanner from './BaBanner';
-import BaImage from './BaImage';
+import Banner from './Banner';
+import Image from './Image';
+import PhotoCard from './PhotoCard';
 
-export { BaBanner, BaImage };
+export { Banner, Image, PhotoCard };

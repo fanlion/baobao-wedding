@@ -1,29 +1,29 @@
-.BaButton {
+.BaImage {
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 8px;
 }
 
-.BaButton--loading {
+.BaImage--loading {
   background: #f0f0f0;
 }
 
-.BaButton-img {
+.BaImage-img {
   height: 100%;
   width: 100%;
   animation: easein 0.425s;
   -webkit-animation: easein 0.425s;
 }
 
-.BaButton--hidden {
+.BaImage--hidden {
   visibility: hidden;
 }
 
-.BaButton--visible {
+.BaImage--visible {
   visibility: visible;
 }
 
-.BaButton-error {
+.BaImage-error {
   position: absolute;
   top: 50%;
   left: 50%;

@@ -1,8 +1,8 @@
 export default {
   pages: [
-    'pages/splash/index',
-    'pages/bless/index',
+    // 'pages/splash/index',
     'pages/home/index',
+    'pages/bless/index',
     'pages/map/index',
     'pages/my/index'
   ],

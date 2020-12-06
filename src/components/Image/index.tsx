@@ -2,7 +2,7 @@
  * @Author: fan.li
  * @Date: 2020-12-06 15:30:08
  * @Last Modified by: fan.li
- * @Last Modified time: 2020-12-06 17:28:54
+ * @Last Modified time: 2020-12-06 18:35:26
  *
  * 图片组件
  */
@@ -11,6 +11,7 @@ import Taro from '@tarojs/taro';
 import { Image, ITouchEvent, View } from '@tarojs/components';
 import cls from 'classnames';
 import noop from 'lodash/noop';
+import { ImageProps } from '@tarojs/components/types/Image';
 import failedImg from './assets/img_failed_icon.png';
 import './style.scss';
 
@@ -19,7 +20,7 @@ const prefix = 'BaImage';
 interface Props {
   className?: string;
   style?: React.CSSProperties;
-  mode?: any;
+  mode?: keyof ImageProps.mode;
   lazyLoad?: boolean;
   imgClassName?: string;
   onClick?: (e: MouseEvent, img: string) => void;

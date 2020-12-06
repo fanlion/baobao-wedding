@@ -1,5 +1,5 @@
 .BaBanner {
-  height: 257px;
+  height: 400px;
   width: 100%;
   background: #ffffff;
   overflow: hidden;
@@ -22,7 +22,7 @@
 
 .BaBanner__swiper {
   // NOTE RN 的 Swiper 需要有高度，否则会报错
-  height: 257px;
+  height: 400px;
   width: 100%;
 
   &-item {
@@ -32,7 +32,7 @@
 
     &-img {
       width: 686px;
-      height: 257px;
+      height: 400px;
       border-radius: 8px;
       overflow: hidden;
     }
