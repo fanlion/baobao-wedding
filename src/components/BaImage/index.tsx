@@ -2,7 +2,7 @@
  * @Author: fan.li
  * @Date: 2020-12-06 15:30:08
  * @Last Modified by: fan.li
- * @Last Modified time: 2020-12-06 17:10:12
+ * @Last Modified time: 2020-12-06 17:28:54
  *
  * 图片组件
  */
@@ -22,7 +22,7 @@ interface Props {
   mode?: any;
   lazyLoad?: boolean;
   imgClassName?: string;
-  onClick?:(e: MouseEvent, img: string) => void;
+  onClick?: (e: MouseEvent, img: string) => void;
   canPreview?: boolean;
   src: string;
   onError?: () => void;
@@ -30,7 +30,18 @@ interface Props {
 }
 
 export default function BaImage(props: Props) {
-  const { className = '', imgClassName = '', lazyLoad, mode, style, src, onError = noop, onLoad = noop, onClick = noop, canPreview } = props;
+  const {
+    className = '',
+    imgClassName = '',
+    lazyLoad,
+    mode,
+    style,
+    src,
+    onError = noop,
+    onLoad = noop,
+    onClick = noop,
+    canPreview
+  } = props;
   const [localImg, setLocalImg] = useState(src);
   const [isLoadFail, setIsLoadFail] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -58,7 +69,7 @@ export default function BaImage(props: Props) {
       return;
     }
     Taro.previewImage({ current: localImg, urls: [localImg] });
-  }
+  };
 
   const isImgVisible = !isLoading && !isLoadFail;
   const wrapCls = cls({
@@ -87,11 +98,7 @@ export default function BaImage(props: Props) {
         onClick={handleImgClick}
       />
 
-      {isLoadFail && (
-        <Image className={`${prefix}-error`}
-          src={failedImg}
-        />
-      )}
+      {isLoadFail && <Image className={`${prefix}-error`} src={failedImg} />}
     </View>
   );
 }

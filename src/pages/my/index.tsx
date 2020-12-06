@@ -1,9 +1,8 @@
-import React from 'react'
-import { View } from '@tarojs/components'
+import React from 'react';
+import { View } from '@tarojs/components';
 
-import './index.scss'
+import './index.scss';
 
 export default function Bless() {
-  return <View>My</View>
+  return <View>My</View>;
 }
-

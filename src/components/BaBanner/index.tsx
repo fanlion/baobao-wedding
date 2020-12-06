@@ -2,7 +2,7 @@
  * @Author: fan.li
  * @Date: 2020-12-06 15:17:45
  * @Last Modified by: fan.li
- * @Last Modified time: 2020-12-06 17:11:38
+ * @Last Modified time: 2020-12-06 17:27:44
  *
  * Banner组件
  */
@@ -28,7 +28,7 @@ export default function BaBanner(props: Props) {
   const { className, list } = props;
 
   return (
-  <View className={prefix}>
+    <View className={prefix}>
       <Swiper
         className={cls(`${prefix}__swiper`, className)}
         circular
@@ -36,12 +36,12 @@ export default function BaBanner(props: Props) {
         indicatorDots
         indicatorActiveColor='rgb(178, 42, 49'
       >
-      {list.map((item: Item) => (
-        <SwiperItem key={item.id} className={`${prefix}__swiper-item`}>
-          <BaImage src={item.src} className={`${prefix}__swiper-item-img`} />
-        </SwiperItem>
-      ))}
-    </Swiper>
-  </View>
-)
+        {list.map((item: Item) => (
+          <SwiperItem key={item.id} className={`${prefix}__swiper-item`}>
+            <BaImage src={item.src} className={`${prefix}__swiper-item-img`} />
+          </SwiperItem>
+        ))}
+      </Swiper>
+    </View>
+  );
 }
