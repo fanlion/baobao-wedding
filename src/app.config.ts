@@ -1,6 +1,10 @@
 export default {
   pages: [
-    'pages/index/index'
+    'pages/splash/index',
+    'pages/index/index',
+    'pages/bless/index',
+    'pages/home/index',
+    'pages/map/index',
   ],
   window: {
     backgroundTextStyle: 'light',
