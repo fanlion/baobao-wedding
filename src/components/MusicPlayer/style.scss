@@ -1,0 +1,65 @@
+.BaMusicPlayer {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 10001;
+  width: 100px;
+  height: 100px;
+
+  &_cd {
+    height: 100%;
+    width: 100%;
+  }
+
+  &_cd__play {
+    animation: musicRotate 3s linear infinite;
+  }
+
+  &_bar {
+    position: absolute;
+    right: 0;
+    width: 28px;
+    height: 120px;
+    margin-left: -5px;
+    transform-origin: top;
+    transform: rotate(20deg);
+  }
+
+  &_bar__play {
+    animation: musicStart 1s linear forwards;
+  }
+
+  &_bar__pause {
+    animation: musicStop 1s linear forwards;
+  }
+
+  @keyframes musicRotate {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes musicStop {
+    from {
+      -webkit-transform: rotate(20deg);
+    }
+
+    to {
+      -webkit-transform: rotate(0deg);
+    }
+  }
+
+  @keyframes musicStart {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+
+    to {
+      -webkit-transform: rotate(20deg);
+    }
+  }
+}

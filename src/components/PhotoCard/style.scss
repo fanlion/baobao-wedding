@@ -1,6 +1,9 @@
 .BaPhotoCard {
   background-color: #ffffff;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 400px;
 
   &_header {
     padding: 8px 16px;
@@ -11,7 +14,7 @@
   }
 
   &_img {
-    height: 400px;
+    flex: 1;
   }
 
   &_detail {
