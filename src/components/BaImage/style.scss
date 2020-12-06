@@ -1,0 +1,51 @@
+.BaButton {
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.BaButton--loading {
+  background: #f0f0f0;
+}
+
+.BaButton-img {
+  height: 100%;
+  width: 100%;
+  animation: easein 0.425s;
+  -webkit-animation: easein 0.425s;
+}
+
+.BaButton--hidden {
+  visibility: hidden;
+}
+
+.BaButton--visible {
+  visibility: visible;
+}
+
+.BaButton-error {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60px;
+  max-height: 42.5px;
+}
+
+@keyframes easein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes easein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

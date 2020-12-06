@@ -1,0 +1,40 @@
+.BaBanner {
+  height: 257px;
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+  margin-top: 17px;
+
+  .swiper-pagination-bullets {
+    .swiper-pagination-bullet {
+      width: 30px;
+      height: 4px;
+      background-color: #ffffff;
+      opacity: 0.4;
+      border-radius: 0;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+}
+
+.BaBanner__swiper {
+  // NOTE RN 的 Swiper 需要有高度，否则会报错
+  height: 257px;
+  width: 100%;
+
+  &-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+    &-img {
+      width: 686px;
+      height: 257px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+  }
+}
