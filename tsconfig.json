@@ -19,14 +19,18 @@
     "jsxFactory": "React.createElement",
     "allowJs": true,
     "resolveJsonModule": true,
-    "typeRoots": [
-      "node_modules/@types",
-      "global.d.ts"
-    ]
+    "typeRoots": ["node_modules/@types", "global.d.ts"],
+    "paths": {
+      "Components/*": ["./src/components/*"],
+      "Resources/*": ["./resources/*"],
+      "Utils/*": ["./src/utils/*"],
+      "Constants/*": ["./src/constants/*"],
+      "Api/*": ["./src/api/*"],
+      "Styles/*": ["./src/styles/*"],
+      "Store/*": ["./src/store/*"],
+      "Hooks/*": ["./src/hooks/*"]
+    }
   },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
+  "exclude": ["node_modules", "dist"],
   "compileOnSave": false
 }
