@@ -19,15 +19,15 @@ const interceptor: Taro.interceptor = (chain: Taro.Chain) => {
 
   return chain
     .proceed(requestParams)
-    .then((res: Response) => {
-      const { code, data } = res;
+    .then((res: { data: Response }) => {
+      const { code, data } = res.data;
 
       if (code === 0) {
         return data;
       } else if (code === 10001) {
-        return Promise.reject(res);
+        return Promise.reject(res.data);
       } else {
-        return Promise.reject(res);
+        return Promise.reject(res.data);
       }
     })
     .catch((e) => {
@@ -39,7 +39,7 @@ const interceptors = [interceptor];
 interceptors.forEach((i) => Taro.addInterceptor(i));
 
 export default function callApi<T = any, U = any>(params: Taro.request.Option<U>) {
-  const url = HOST_URL + '/api' + params.url;
+  const url = HOST_URL + params.url;
   const options: Taro.request.Option<U> = { ...params, url };
 
   return Taro.request<T, U>(options);
