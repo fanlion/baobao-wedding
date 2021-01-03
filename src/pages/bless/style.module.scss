@@ -1,0 +1,51 @@
+.container {
+  background-color: #f1f2f7;
+}
+
+.content {
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 20px;
+  line-height: 60px;
+}
+
+.avatar_wrap {
+  padding: 10px;
+}
+
+.like_wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.bless_btn {
+  width: 300px;
+  background: #cd96cd;
+  color: #fff;
+}
+
+.share_btn {
+  width: 300px;
+  margin-left: 20px;
+  background: #cd96cd;
+  color: #fff;
+}
+
+.comment:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}

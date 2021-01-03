@@ -1,0 +1,38 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #f1f2f7;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(190, 77, 43, 0.2);
+}
+
+.right {
+  margin-left: 20px;
+  flex: 1;
+}
+
+.right_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nickname {
+  font-size: 30px;
+  font-weight: 600;
+  color: #666;
+}
+
+.time {
+  font-size: 24px;
+  color: #cccccc;
+}
+
+.comment {
+  font-size: 30px;
+  line-height: 50px;
+  color: #999;
+}

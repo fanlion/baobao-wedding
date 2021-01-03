@@ -1,8 +1,8 @@
 export default {
   pages: [
     // 'pages/splash/index',
-    'pages/home/index',
     'pages/bless/index',
+    'pages/home/index',
     'pages/map/index',
     'pages/my/index',
     'pages/gallery/index'
@@ -16,7 +16,7 @@ export default {
   tabBar: {
     list: [
       {
-        pagePath: 'pages/home/index',
+        pagePath: 'pages/bless/index',
         iconPath: 'assets/image/tab/ic_home_normal.png',
         selectedIconPath: 'assets/image/tab/ic_home_select.png',
         text: '首页'
@@ -28,7 +28,7 @@ export default {
         text: '导航'
       },
       {
-        pagePath: 'pages/bless/index',
+        pagePath: 'pages/home/index',
         iconPath: 'assets/image/tab/ic_heart_normal.png',
         selectedIconPath: 'assets/image/tab/ic_heart_select.png',
         text: '祝福'
