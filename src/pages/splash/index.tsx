@@ -17,11 +17,11 @@ export default function Splash() {
       }
 
       const { code } = await Taro.login();
-      const { userInfo, encryptedData, iv } = await Taro.getUserInfo({ withCredentials: true });
+      const { encryptedData, iv } = await Taro.getUserInfo({ withCredentials: true });
       const token = await CallApi<string>({
         url: '/wxlogin',
         method: 'POST',
-        data: { code, encryptedData, iv, userInfo }
+        data: { code, encryptedData, iv }
       });
       Taro.setStorageSync('token', token);
       Taro.switchTab({ url: '/pages/home/index' });

@@ -2,26 +2,22 @@
  * @Author: fan.li
  * @Date: 2020-12-06 15:17:45
  * @Last Modified by: fan.li
- * @Last Modified time: 2020-12-06 23:23:18
+ * @Last Modified time: 2021-01-03 00:37:12
  *
  * Banner组件
  */
 import React from 'react';
 import { View, Swiper, SwiperItem } from '@tarojs/components';
 import cls from 'classnames';
+import { BannerData } from 'Api/home/requestBannerList';
 import './style.scss';
 import Image from '../Image';
 
 const prefix = 'BaBanner';
 
-interface Item {
-  id: string;
-  src: string;
-}
-
 interface Props {
   className?: string;
-  list: Item[];
+  list: BannerData[];
 }
 
 export default function Banner(props: Props) {
@@ -36,9 +32,9 @@ export default function Banner(props: Props) {
         indicatorDots
         indicatorActiveColor='rgb(178, 42, 49'
       >
-        {list.map((item: Item) => (
+        {list.map((item: BannerData) => (
           <SwiperItem key={item.id} className={`${prefix}__swiper-item`}>
-            <Image src={item.src} className={`${prefix}__swiper-item-img`} mode='aspectFill' />
+            <Image src={item.imrUrl} className={`${prefix}__swiper-item-img`} mode='aspectFill' />
           </SwiperItem>
         ))}
       </Swiper>
