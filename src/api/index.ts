@@ -2,10 +2,10 @@
  * @Author: fan.li
  * @Date: 2021-01-02 22:02:25
  * @Last Modified by: fan.li
- * @Last Modified time: 2021-01-02 22:51:25
+ * @Last Modified time: 2021-01-03 14:10:16
  *
  */
 
-import { requestBannerList, requestGalleryList } from './home';
+import { requestBannerList, requestGalleryList, requestPhotoList } from './home';
 
-export { requestBannerList, requestGalleryList };
+export { requestBannerList, requestGalleryList, requestPhotoList };

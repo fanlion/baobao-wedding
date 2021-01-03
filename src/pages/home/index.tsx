@@ -24,12 +24,22 @@ export default function Home() {
     fetchData();
   }, []);
 
+  const handlePhotoCardClick = (id: number) => {
+    Taro.navigateTo({ url: `/pages/gallery/index?id=${id}` });
+  };
+
   return (
     <View className={styles.container}>
       <MusicPlayer src='' />
       <Banner list={bannerList} className={styles.banner} />
       {galleryList.map((item) => (
-        <PhotoCard key={item.id} src={item.imgUrl} className={styles.card} title={item.name} />
+        <PhotoCard
+          key={item.id}
+          src={item.imgUrl}
+          className={styles.card}
+          title={item.name}
+          onClick={() => handlePhotoCardClick(item.id)}
+        />
       ))}
     </View>
   );

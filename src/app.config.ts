@@ -4,7 +4,8 @@ export default {
     'pages/home/index',
     'pages/bless/index',
     'pages/map/index',
-    'pages/my/index'
+    'pages/my/index',
+    'pages/gallery/index'
   ],
   window: {
     backgroundTextStyle: 'light',
